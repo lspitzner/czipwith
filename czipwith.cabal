@@ -1,5 +1,5 @@
 name:                czipwith
-version:             1.0.1.0
+version:             1.0.1.1
 synopsis:            CZipWith class and deriving via TH
 description:         A typeclass similar to Data.Distributive, but for
                      data parameterised with a type constructor. The name
