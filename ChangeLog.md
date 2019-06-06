@@ -1,5 +1,9 @@
 # Revision history for czipwith
 
+## 1.0.1.2  -- June 2019
+
+* Maintenance release for ghc-8.8
+
 ## 1.0.1.1  -- October 2018
 
 * Maintenance release for ghc-8.6
