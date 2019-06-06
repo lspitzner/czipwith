@@ -79,9 +79,10 @@ where
 
 
 
+import           Data.Kind (Type)
 import           Data.Functor.Compose
 import           Language.Haskell.TH.Lib
-import           Language.Haskell.TH.Syntax
+import           Language.Haskell.TH.Syntax hiding (Type)
 
 
 -- | The "lifted Apply" class
@@ -131,7 +132,7 @@ class CFunctor c where
 --                                      -- (Pair being a trivial fixed-size vector example)
 -- data CStream a f = CStream (f a) (CStream a f) -- corresponding to an infinite stream
 -- @
-class CZipWith (k :: (* -> *) -> *) where
+class CZipWith (k :: (Type -> Type) -> Type) where
   -- | zipWith on constructors instead of values.
   cZipWith :: (forall a . g a -> h a -> i a) -> k g -> k h -> k i
 
