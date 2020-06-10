@@ -1,5 +1,11 @@
 # Revision history for czipwith
 
+## 1.0.1.3  -- June 2020
+
+* Maintenance release for ghc-8.10
+* Drop support for ghc < 8.4
+* Add nix-expressions
+
 ## 1.0.1.2  -- June 2019
 
 * Maintenance release for ghc-8.8
