@@ -73,6 +73,7 @@ main = do
   let x6 = cPoint (Const True)
   errorIf (x6 /= B (Const True) (Const True) (A (Const True) (Const True)))
     $ return ()
+  putStrLn "no errors found!"
 
 errorIf :: Bool -> a -> a
 errorIf False = id
