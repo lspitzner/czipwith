@@ -27,7 +27,7 @@ library
   -- other-modules:       
   -- other-extensions:    
   build-depends:
-    { base >=4.9 && <4.15
+    { base >=4.11 && <4.15
     , template-haskell >=2.9 && <2.17
     }
   hs-source-dirs:      src
