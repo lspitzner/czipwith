@@ -223,8 +223,13 @@ deriveCPointed name = do
                 ++ show con
                 ++ ")"
       let tyvar = case _tyvarbnd of
+#if MIN_VERSION_template_haskell(2,17,0)
+            PlainTV n _    -> n
+            KindedTV n _ _ -> n
+#else
             PlainTV n    -> n
             KindedTV n _ -> n
+#endif
       let fQ   = mkName "f"
       let pats = [varP fQ]
       let
@@ -310,8 +315,13 @@ deriveCZipWith name = do
                 ++ show con
                 ++ ")"
       let tyvar = case tyvarbnd of
+#if MIN_VERSION_template_haskell(2,17,0)
+            PlainTV n _    -> n
+            KindedTV n _ _ -> n
+#else
             PlainTV n    -> n
             KindedTV n _ -> n
+#endif
       let fQ       = mkName "f"
       let indexTys = zip [1 ..] elemTys
       let indexTysVars = indexTys <&> \(i :: Int, ty) ->
@@ -403,8 +413,13 @@ deriveCZipWithM name = do
                 ++ show con
                 ++ ")"
       let tyvar = case tyvarbnd of
+#if MIN_VERSION_template_haskell(2,17,0)
+            PlainTV n _    -> n
+            KindedTV n _ _ -> n
+#else
             PlainTV n    -> n
             KindedTV n _ -> n
+#endif
       let fQ       = mkName "f"
       let indexTys = zip [1 ..] elemTys
       let indexTysVars = indexTys <&> \(i :: Int, ty) ->
