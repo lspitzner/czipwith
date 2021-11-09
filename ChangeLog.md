@@ -1,5 +1,10 @@
 # Revision history for czipwith
 
+## 1.0.1.4  -- November 2021
+
+* Maintenance release for ghc-9.0
+* Switch to seaaye as wrapper around nix (see nix/README.md)
+
 ## 1.0.1.3  -- June 2020
 
 * Maintenance release for ghc-8.10
