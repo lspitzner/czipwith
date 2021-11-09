@@ -36,6 +36,11 @@ export NIX_CONFIG=$(cat \
       stackFile = "stack-8.8.yaml";
       ghc-ver = "ghc884";
     };
+    stackage-8-10 = {
+      resolver = "stackage";
+      stackFile = "stack-8.10.yaml";
+      ghc-ver = "ghc8107";
+    };
   };
   module-flags = [
     # N.B.: There are haskell-nix module options. See the haskell-nix docs
