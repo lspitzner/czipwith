@@ -5,7 +5,7 @@ set -e
 ###############################
 # START OF PER-PROJECT SETTINGS
 ###############################
-SEAAYE_VERSION=71f1cb58ac02af5c9b4fce85def1cf5c9e01e901
+SEAAYE_VERSION=48ee9b6cd7ca681cc0a83fe8afce8c9746cfe41c
 export NIX_CONFIG=$(cat \
 <<EOF
 { package-name = "czipwith";
@@ -60,6 +60,8 @@ export NIX_CONFIG=$(cat \
     { packages.my-package.flags.my-package-examples-examples = true; }
   ];
   default-target = "hackage-8-06";
+  do-check-hackage = "hackage.haskell.org";
+  do-check-changelog = "ChangeLog.md";
   # local-config-path = ./nix/local-config.nix;
 }
 EOF
